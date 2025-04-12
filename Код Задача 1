@@ -1,8 +1,22 @@
-#include <stdio.h>
-
-int main() {
-  int red_balls[10];
-  int size = sizeof(red_balls) / sizeof(red_balls[0]);
-  printf("В коробке red_balls помещается %d шариков.\n", size);
-  return 0;
-}
+include <stdio.h>
+2	
+3	int main() {
+4	    int red_balls[10];  // Массив на 10 элементов
+5	    int size = sizeof(red_balls) / sizeof(red_balls[0]);  // Вычисляем размер
+6	    
+7	    // Заполняем массив 10 элементами (например, числами от 1 до 10)
+8	    for (int i = 0; i < size; i++) {
+9	        red_balls[i] = i + 1;  // 1, 2, 3, ..., 10
+10	    }
+11	    
+12	    printf("В коробке red_balls помещается %d шариков.\n", size);
+13	    printf("Сейчас в ней лежит 10 шариков:\n");
+14	    
+15	    // Выводим все элементы массива
+16	    for (int i = 0; i < size; i++) {
+17	        printf("Шарик %d: %d\n", i + 1, red_balls[i]);
+18	        printf("В коробке red_balls помещается %d шариков.\n", size);
+19	    }
+20	    
+21	    return 0;
+22	}
